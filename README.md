@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next Property
 
-## Getting Started
+> A web application to help you find your next rental property.
 
-First, run the development server:
+**Live URL:** <https://next-property-omega.vercel.app/>
+
+**Demo Video:** [![](/public/Next-Property.png)](https://www.youtube.com/watch?v=Curs-2fkWEI)
+
+## Table of Contents
+
+-   [Introduction](#introduction)
+-   [Features](#features)
+-   [Tech Stack](#tech-stack)
+-   [Prerequisites](#prerequisites)
+-   [Installation](#installation)
+-   [Environment Variables](#environment-variables)
+-   [Running the Development Server](#running-the-development-server)
+-   [Building for Production](#building-for-production)
+-   [Deployment](#deployment)
+-   [Project Structure](#project-structure)
+-   [Contributing](#contributing)
+-   [License](#license)
+
+## Introduction
+
+Next Property is a Next.js 14-based web application designed to streamline the process of finding and listing rental properties. Built during the [Next 14 From Scratch Course](https://www.traversymedia.com/nextjs-from-scratch), App that leverages Next.js Server Actions instead of traditional API routes.
+
+## Features
+
+-   User authentication with Google & NextAuth.js
+-   Protected routes & user authorization
+-   User profiles with personal listings
+-   Property listing CRUD operations
+-   Multiple image uploads via Cloudinary
+-   Property search & filtering
+-   Internal messaging with unread count notifications
+-   PhotoSwipe image gallery
+-   Interactive Mapbox maps
+-   Toast notifications for user feedback
+-   Bookmark & share properties on social media
+-   Responsive design with Tailwind CSS
+-   Custom 404 & loading states
+-   Next.js Server Actions for data mutations
+
+## Tech Stack
+
+-   Next.js
+-   React
+-   Tailwind CSS
+-   MongoDB & Mongoose
+-   NextAuth.js
+-   Cloudinary
+-   Mapbox (react-map-gl)
+-   PhotoSwipe
+-   React Toastify
+-   React Spinners
+
+## Prerequisites
+
+-   Node.js v18+
+-   MongoDB Atlas cluster
+-   Cloudinary account
+-   Google Cloud credentials
+-   Mapbox account
+
+## Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/yourusername/next-property.git
+    cd next-property
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+## Environment Variables
+
+Create a `.env` file at the project root and fill in the following keys:
+
+```bash
+MONGODB_URI=
+NEXT_PUBLIC_DOMAIN=
+NEXT_PUBLIC_API_DOMAIN=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+CLOUDINARY_CLOUD_NAME=
+NEXTAUTH_URL=
+NEXTAUTH_URL_INTERNAL=
+NEXTAUTH_SECRET=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+NEXT_PUBLIC_MAPBOX_TOKEN=
+```
+
+## Running the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view in the browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This project is deployed on Vercel:
+<https://next-property-omega.vercel.app/>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+.
+├─ app/               # Next.js App Router pages & layouts
+├─ components/        # Reusable React components
+├─ context/           # React context for global state
+├─ config/            # Cloudinary, database config
+├─ models/            # Mongoose schemas
+├─ public/            # Static assets (images, favicon)
+├─ styles/            # Global & component CSS (Tailwind entry)
+├─ utils/             # Helper functions & options
+├─ tailwind.config.js
+├─ postcss.config.js
+├─ next.config.js
+├─ package.json
+└─ README.md
+```
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome! Please open an issue or submit a pull request.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md) file for details.
+
+## Author
+
+Developed by Aman Dubey
+
