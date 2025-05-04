@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/images/logo.png";
 
@@ -14,10 +13,10 @@ const Footer = () => {
                 <div className="flex flex-wrap justify-center md:justify-start mb-4 md:mb-0">
                     <ul className="flex space-x-4">
                         <li>
-                            <Link href="/properties">Properties</Link>
+                            <a href="/properties">Properties</a>
                         </li>
                         <li>
-                            <Link href="/terms">Terms of Service</Link>
+                            <a href="/terms">Terms of Service</a>
                         </li>
                     </ul>
                 </div>

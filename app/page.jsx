@@ -1,17 +1,16 @@
-import Hero from "@/components/Hero";
-import InfoBoxes from "@/components/InfoBoxes";
-import Link from "next/link";
-import HomeProperties from "@/components/HomeProperties";
+import Hero from '../components/Hero';
+import InfoBoxes from '@/components/InfoBoxes';
+import HomeProperties from '@/components/HomeProperties';
+import FeaturedProperties from '@/components/FeaturedProperties';
 
 const HomePage = () => {
-    return (
-        <div>
-            <Hero />
-            <InfoBoxes />
-            <HomeProperties />
-        </div>
-    );
+  return (
+    <>
+      <Hero />
+      <InfoBoxes />
+      <FeaturedProperties />
+      <HomeProperties />
+    </>
+  );
 };
-
 export default HomePage;
-

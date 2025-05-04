@@ -7,7 +7,7 @@ import { FaGoogle } from "react-icons/fa";
 import logo from "@/assets/images/logo-white.png";
 import profileDefault from "@/assets/images/profile.png";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
-// import UnreadMessageCount from "./UnreadMessageCount";
+import UnreadMessageCount from "./UnreadMessageCount";
 
 const Navbar = () => {
     const { data: session } = useSession();
@@ -71,7 +71,7 @@ const Navbar = () => {
                         <Link className="flex flex-shrink-0 items-center" href="/">
                             <Image className="h-10 w-auto" src={logo} alt="NextProperty" />
 
-                            <span className="hidden md:block text-white text-2xl font-bold ml-2">
+                            <span className="md:block text-white text-2xl font-bold ml-2">
                                 NextProperty
                             </span>
                         </Link>
@@ -152,7 +152,7 @@ const Navbar = () => {
                                         />
                                     </svg>
                                 </button>
-                                {/* <UnreadMessageCount /> */}
+                                <UnreadMessageCount />
                             </Link>
                             {/* <!-- Profile dropdown button --> */}
                             <div className="relative ml-3">
@@ -169,7 +169,7 @@ const Navbar = () => {
                                         <span className="sr-only">Open user menu</span>
                                         <Image
                                             className="h-8 w-8 rounded-full"
-                                            src={profileImage || `/${profileDefault}`}
+                                            src={profileImage || profileDefault}
                                             alt=""
                                             width={40}
                                             height={40}
